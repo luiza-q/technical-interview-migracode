@@ -18,14 +18,5 @@ function decreaseNumber(){
 }
 
 
-function addNumber(number){
-    const counterNumber = document.querySelector('input');
-    if(!counterNumber.value) {
-        counterNumber.value = parseInt(number);
-    } else {
-        counterNumber.value = parseInt(counterNumber.value) + number;
-    }
-}
-
-increaseButton.addEventListener("click", () => addNumber(+1));
-decreaseButton.addEventListener('click', () => addNumber(-1));
+increaseButton.addEventListener("click", increaseNumber);
+decreaseButton.addEventListener('click', decreaseNumber);
